@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 
 class Landing extends Component {
-    /* your code here */
-
+    
+    hottest(){
+        let hottest = this.props.store.find(s => s.hottest)
+        return hottest
+    } 
 
     render() {
-        return {/* your code here */ }
-
+        return <div>Welcome, {this.props.user}, hottest item: {this.hottest()}</div>
     }
 }
 
